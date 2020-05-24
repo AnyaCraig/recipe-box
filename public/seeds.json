@@ -1,0 +1,222 @@
+[
+  {
+    "id": "1",
+    "name": "Thai Chicken Curry",
+    "source": "30 Minutes and Light",
+    "pageNumber": "46",
+    "mainIngredients": [
+      "chicken",
+      "curry paste",
+      "red pepper"
+    ],
+    "caloriesPerServing": 500,
+    "isVegan": false,
+    "isVegetarian": false,
+    "isQuick": true,
+    "isHealthy": true,
+    "isSlowcooker": false,
+    "isInstantPot": false,
+    "isAirFryer": false,
+    "isForCompany": false
+  },
+  {
+    "id": "2",
+    "name": "Turkey Cheeseburger Soup",
+    "source": "Skinnytaste One and Done",
+    "pageNumber": "140",
+    "mainIngredients": [
+      "ground turkey",
+      "cheddar cheese",
+      "potato"
+    ],
+    "caloriesPerServing": 375,
+    "isVegan": false,
+    "isVegetarian": false,
+    "isQuick": false,
+    "isHealthy": true,
+    "isSlowcooker": false,
+    "isInstantPot": true,
+    "isAirFryer": false,
+    "isForCompany": false
+  },
+  {
+    "id": "3",
+    "name": "Low-carb Cheeseburger Sliders",
+    "source": "Skinnytaste",
+    "pageNumber": "86",
+    "mainIngredients": [
+      "ground beef",
+      "boston lettuce",
+      "cheddar cheese"
+    ],
+    "caloriesPerServing": 300,
+    "isVegan": false,
+    "isVegetarian": false,
+    "isQuick": true,
+    "isHealthy": true,
+    "isSlowcooker": false,
+    "isInstantPot": false,
+    "isAirFryer": false,
+    "isForCompany": false
+  },
+  {
+    "id": "4",
+    "name": "Chickpea Cauliflower Masala",
+    "source": "binder",
+    "pageNumber": "",
+    "mainIngredients": [
+      "chickpeas",
+      "cauliflower",
+      "whipping cream"
+    ],
+    "caloriesPerServing": 325,
+    "isVegan": false,
+    "isVegetarian": true,
+    "isQuick": false,
+    "isHealthy": true,
+    "isSlowcooker": false,
+    "isInstantPot": false,
+    "isAirFryer": false,
+    "isForCompany": false
+  },
+  {
+    "id": "5",
+    "name": "Thai Ground Chicken Salad",
+    "source": "Biggest Loser Cookbook",
+    "pageNumber": "145",
+    "mainIngredients": [
+      "ground chicken",
+      "romaine hearts",
+      "carrot"
+    ],
+    "caloriesPerServing": 350,
+    "isVegan": false,
+    "isVegetarian": false,
+    "isQuick": true,
+    "isHealthy": true,
+    "isSlowcooker": false,
+    "isInstantPot": false,
+    "isAirFryer": false,
+    "isForCompany": false
+  },
+  {
+    "id": "6",
+    "name": "Chicken Marsala",
+    "source": "Skinnytaste",
+    "pageNumber": "167",
+    "mainIngredients": [
+      "chicken breast",
+      "whipping cream",
+      "mushrooms"
+    ],
+    "caloriesPerServing": 500,
+    "isVegan": false,
+    "isVegetarian": false,
+    "isQuick": false,
+    "isHealthy": true,
+    "isSlowcooker": false,
+    "isInstantPot": false,
+    "isAirFryer": false,
+    "isForCompany": true
+  },
+  {
+    "id": "7",
+    "name": "Czech Meat Patties with Potatoes and Cucumber Salad",
+    "source": "Skinnytaste One and Done",
+    "pageNumber": "101",
+    "mainIngredients": [
+      "ground turkey",
+      "potatoes",
+      "cucumbers"
+    ],
+    "caloriesPerServing": 540,
+    "isVegan": false,
+    "isVegetarian": false,
+    "isQuick": false,
+    "isHealthy": true,
+    "isSlowcooker": false,
+    "isInstantPot": false,
+    "isAirFryer": false,
+    "isForCompany": false
+  },
+  {
+    "id": "8",
+    "name": "Spicy Fried Chicken Sandwiches",
+    "source": "Skinnytaste One and Done",
+    "pageNumber": "175",
+    "mainIngredients": [
+      "chicken breast",
+      "buns",
+      "panko",
+      "jalapenos"
+    ],
+    "caloriesPerServing": 542,
+    "isVegan": false,
+    "isVegetarian": false,
+    "isQuick": false,
+    "isHealthy": true,
+    "isSlowcooker": false,
+    "isInstantPot": false,
+    "isAirFryer": true,
+    "isForCompany": false
+  },
+  {
+    "id": "9",
+    "name": "Farmhouse Winter Cabbage Broth",
+    "source": "Soups",
+    "pageNumber": "26",
+    "mainIngredients": [
+      "cabbage",
+      "turkey sausage"
+    ],
+    "caloriesPerServing": 300,
+    "isVegan": false,
+    "isVegetarian": false,
+    "isQuick": false,
+    "isHealthy": true,
+    "isSlowcooker": false,
+    "isInstantPot": false,
+    "isAirFryer": false,
+    "isForCompany": false
+  },
+  {
+    "id": "10",
+    "name": "Buffalo Drumsticks with Creamy Cabbage and Kale Slaw",
+    "source": "Skinnytaste One and Done",
+    "pageNumber": "171",
+    "mainIngredients": [
+      "chicken drumsticks",
+      "cabbage",
+      "kale"
+    ],
+    "caloriesPerServing": 400,
+    "isVegan": false,
+    "isVegetarian": false,
+    "isQuick": false,
+    "isHealthy": true,
+    "isSlowcooker": false,
+    "isInstantPot": false,
+    "isAirFryer": true,
+    "isForCompany": false
+  },
+  {
+    "id": "11",
+    "name": "Tagliatelle Bolognese",
+    "source": "binder",
+    "pageNumber": "",
+    "mainIngredients": [
+      "ground beef",
+      "ground pork",
+      "red wine"
+    ],
+    "caloriesPerServing": 800,
+    "isVegan": false,
+    "isVegetarian": false,
+    "isQuick": false,
+    "isHealthy": false,
+    "isSlowcooker": false,
+    "isInstantPot": false,
+    "isAirFryer": false,
+    "isForCompany": true
+  }
+]
