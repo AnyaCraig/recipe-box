@@ -1,30 +1,29 @@
-import React from "react";
-import { Recipe } from "../types";
-import { RecipeWrapper } from "./styled";
-import RecipeTagsSection from "../recipe-tags-section";
+import React from 'react';
+import { Recipe } from '../types';
+import { RecipeWrapper } from './styled';
+import RecipeTagsSection from '../recipe-tags-section';
+import { RecipeCardHeader } from './recipe-card-header';
 
 interface RecipeCardProps {
   recipeData: Recipe;
 }
 
-const RecipeCard: React.FC<RecipeCardProps> = ({ recipeData }) => {
+export const RecipeCard: React.FC<RecipeCardProps> = ({ recipeData }) => {
   const getRecipeTags = (recipeInfo: Recipe) => {
     return {
+      isFavourite: recipeInfo.isFavourite,
       isVegan: recipeInfo.isVegan,
       isVegetarian: recipeInfo.isVegetarian,
       isHealthy: recipeInfo.isHealthy,
       isQuick: recipeInfo.isQuick,
       isForCompany: recipeInfo.isForCompany,
-      isLowCal:
-        (recipeInfo.caloriesPerServing &&
-          recipeInfo.caloriesPerServing < 450) ||
-        false,
+      isLowCal: (recipeInfo.caloriesPerServing && recipeInfo.caloriesPerServing < 450) || false,
     };
   };
 
   return (
     <RecipeWrapper>
-      <p>{recipeData.name}</p>
+      <RecipeCardHeader recipeName={recipeData.name} isFavourite={recipeData.isFavourite} />
       <RecipeTagsSection tags={getRecipeTags(recipeData)} />
       <p>
         Number of calories: <b>{recipeData.caloriesPerServing}</b>
@@ -36,5 +35,3 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipeData }) => {
     </RecipeWrapper>
   );
 };
-
-export default RecipeCard;

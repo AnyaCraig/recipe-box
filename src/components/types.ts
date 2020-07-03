@@ -5,6 +5,8 @@ export interface Recipe {
   pageNumber?: string;
   mainIngredients?: string[];
   caloriesPerServing?: number;
+  isCheap: boolean;
+  isFavourite: boolean;
   isVegan: boolean;
   isVegetarian: boolean;
   isQuick: boolean;
