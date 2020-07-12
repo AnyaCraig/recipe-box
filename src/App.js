@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import RecipeCardList from './components/recipe-card-list/index';
 import Async from 'react-async';
+import { AddRecipeForm } from './components/add-recipe-form/add-recipe-form';
 
 function App() {
   const loadRecipes = () =>
@@ -17,7 +18,8 @@ function App() {
           if (err) return `Something went wrong: ${err.message}`;
           return (
             <div className="recipe-data">
-              <RecipeCardList recipes={data} />
+              {/* <RecipeCardList recipes={data} /> */}
+              <AddRecipeForm />
             </div>
           );
         }}

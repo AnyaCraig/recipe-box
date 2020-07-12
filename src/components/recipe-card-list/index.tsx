@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { RecipeCard } from '../recipe-card';
-import { Recipe } from '../types';
+import { Recipe, RecipeFilterKeys } from '../types';
 import { RecipeUnorderedList } from './styled';
 
 interface RecipeCardListProps {
@@ -15,15 +15,9 @@ const RecipeCardList: React.FC<RecipeCardListProps> = ({ recipes }) => {
     setRecipesToShow(recipesToShow);
   };
 
-  // TO DO: Get this working  - currently getting an error
-  // const handleFilterButtonClick = (filterTerm: any) => {
-  //   const filteredRecipes = allRecipes.filter((recipe) => recipe[filterTerm]);
-  //   filterRecipesToShow(filteredRecipes);
-  // };
-
-  const handleHealthyButtonClick = () => {
-    const healthyRecipes = allRecipes.filter((recipe) => recipe.isHealthy);
-    filterRecipesToShow(healthyRecipes);
+  const handleFilterButtonClick = (filterTerm: RecipeFilterKeys) => {
+    const filteredRecipes = allRecipes.filter((recipe) => recipe[filterTerm]);
+    filterRecipesToShow(filteredRecipes);
   };
 
   const handleLowCalButtonClick = () => {
@@ -60,10 +54,10 @@ const RecipeCardList: React.FC<RecipeCardListProps> = ({ recipes }) => {
   return (
     <div className="wrapper">
       <h2>Here are your recipes</h2>
-      {/* <button onClick={() => handleFilterButtonClick('isHealthy')}>
+      <button onClick={() => handleFilterButtonClick('isHealthy')}>
         Show only healthy recipes
-      </button> */}
-      <button onClick={handleHealthyButtonClick}>Show only healthy recipes</button>
+      </button>
+      {/* <button onClick={handleHealthyButtonClick}>Show only healthy recipes</button> */}
       <button onClick={handleLowCalButtonClick}>Show only low-cal recipes</button>
       <button onClick={handleForCompanyButtonClick}>Show only recipes fit for company</button>
       <button onClick={handleVeganButtonClick}>Show only vegan recipes</button>
