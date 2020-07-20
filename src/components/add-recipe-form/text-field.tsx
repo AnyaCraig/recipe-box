@@ -10,12 +10,12 @@ interface TextFieldProps {
 }
 
 export const TextField: React.FC<TextFieldProps> = ({ name, id, label }) => {
-  const [fieldProps, meta, helpers] = useField(name);
+  const [fieldProps, meta] = useField(name);
   return (
     <InputWrapper>
       <label htmlFor={id}>{label}</label>
       <input type="text" {...fieldProps} id={id} />
-      {meta.error && <ErrorMessage>{meta.error}</ErrorMessage>}
+      {meta.error && meta.touched && <ErrorMessage>{meta.error}</ErrorMessage>}
     </InputWrapper>
   );
 };

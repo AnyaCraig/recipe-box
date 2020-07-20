@@ -1,6 +1,6 @@
 import React from 'react';
-import { useFormikContext, useFormik, useField, FormikProvider } from 'formik';
-import { ErrorMessage, InputWrapper, StyledForm } from './styled';
+import { useFormikContext, useFormik, FormikProvider } from 'formik';
+import { StyledForm } from './styled';
 import { Checkbox } from './checkbox';
 import { TextField } from './text-field';
 import { isValueANumber } from './validation';
@@ -16,16 +16,16 @@ type FormValues = {
   pageNumber: string;
   // mainIngredients: string[];
   caloriesPerServing: number | null;
-  isCheap: boolean | null;
-  isFavourite: boolean | null;
-  isVegan: boolean | null;
-  isVegetarian: boolean | null;
-  isQuick: boolean | null;
-  isHealthy: boolean | null;
-  isSlowCooker: boolean | null;
-  isInstantPot: boolean | null;
-  isAirFryer: boolean | null;
-  isForCompany: boolean | null;
+  isCheap: boolean;
+  isFavourite: boolean;
+  isVegan: boolean;
+  isVegetarian: boolean;
+  isQuick: boolean;
+  isHealthy: boolean;
+  isSlowCooker: boolean;
+  isInstantPot: boolean;
+  isAirFryer: boolean;
+  isForCompany: boolean;
 };
 
 export const AddRecipeForm: React.FC<AddRecipeFormProps> = ({}) => {
@@ -35,16 +35,16 @@ export const AddRecipeForm: React.FC<AddRecipeFormProps> = ({}) => {
     pageNumber: '',
     // mainIngredients: [],
     caloriesPerServing: null,
-    isCheap: null,
-    isFavourite: null,
-    isVegan: null,
-    isVegetarian: null,
-    isQuick: null,
-    isHealthy: null,
-    isSlowCooker: null,
-    isInstantPot: null,
-    isAirFryer: null,
-    isForCompany: null,
+    isCheap: false,
+    isFavourite: false,
+    isVegan: false,
+    isVegetarian: false,
+    isQuick: false,
+    isHealthy: false,
+    isSlowCooker: false,
+    isInstantPot: false,
+    isAirFryer: false,
+    isForCompany: false,
   };
 
   const formik = useFormik<FormValues>({
@@ -54,6 +54,8 @@ export const AddRecipeForm: React.FC<AddRecipeFormProps> = ({}) => {
     initialValues: initialFormValues,
     validate: (values) => {
       let errors: any = {};
+
+      console.log('VALUES', values);
 
       if (!values.name) {
         errors.name = 'This field is required';
@@ -67,35 +69,35 @@ export const AddRecipeForm: React.FC<AddRecipeFormProps> = ({}) => {
         errors.caloriesPerServing = 'This needs to be a number';
       }
 
-      // const requiredCheckboxes = [
-      //   'isCheap',
-      //   'isFavourite',
-      //   'isVegan',
-      //   'isVegetarian',
-      //   'isHealthy',
-      //   'isSlowCooker',
-      //   'isAirFryer',
-      //   'isInstantPot',
-      //   'isForCompany',
-      //   'isQuick',
-      // ];
+      const requiredCheckboxes: RequiredCheckboxKeys[] = [
+        'isCheap',
+        'isFavourite',
+        'isVegan',
+        'isVegetarian',
+        'isHealthy',
+        'isSlowCooker',
+        'isAirFryer',
+        'isInstantPot',
+        'isForCompany',
+        'isQuick',
+      ];
 
-      // const boxErrors: BoxErrors = {};
+      const boxErrors: BoxErrors = {};
 
-      // const checkboxErrors = requiredCheckboxes.reduce(
-      //   (acc: BoxErrors, curr: RequiredCheckboxKeys) => {
-      //     if (!values[curr]) {
-      //       acc[curr] = 'Please check an option!';
-      //     }
+      const checkboxErrors = requiredCheckboxes.reduce(
+        (acc: BoxErrors, curr: RequiredCheckboxKeys) => {
+          if (!values[curr]) {
+            acc[curr] = 'Please check an option!';
+          }
 
-      //     return acc;
-      //   },
-      //   boxErrors,
-      // );
+          return acc;
+        },
+        boxErrors,
+      );
 
-      // return { errors, ...checkboxErrors };
+      console.log('CHECKBOX ERRORS', checkboxErrors);
 
-      return errors;
+      return { ...errors, ...checkboxErrors };
     },
   });
 

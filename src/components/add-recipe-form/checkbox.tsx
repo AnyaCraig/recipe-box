@@ -1,4 +1,4 @@
-import { CheckboxInputWrapper } from './styled';
+import { CheckboxInputWrapper, ErrorMessage } from './styled';
 
 import React from 'react';
 import { useField } from 'formik';
@@ -10,11 +10,13 @@ interface CheckboxProps {
 }
 
 export const Checkbox: React.FC<CheckboxProps> = ({ name, id, label }) => {
-  const [fieldProps, meta, helpers] = useField(name);
+  const [fieldProps, meta] = useField(name);
+
   return (
     <CheckboxInputWrapper>
       <input type="checkbox" checked={fieldProps.value} id={id} {...fieldProps} />
       <label htmlFor={id}>{label}</label>
+      {meta.error && meta.touched && <ErrorMessage>{meta.error}</ErrorMessage>}
     </CheckboxInputWrapper>
   );
 };
